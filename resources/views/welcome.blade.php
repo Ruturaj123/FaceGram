@@ -223,7 +223,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>

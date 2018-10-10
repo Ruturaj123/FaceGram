@@ -36,10 +36,6 @@ class UserController extends Controller{
 		}
 	}
 
-	public function getHome(){
-		return view('home');
-	}
-
 	// public function index()
  //    {
  //        $users = DB::select('select * from users where active = ?', [1]);

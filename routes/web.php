@@ -17,11 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', [
-		'uses'=> 'UserController@getHome',
-		'as' => 'home',
-		'middleware' => 'guest'
-	]);
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::post('/signup', [
   	'uses' => 'UserController@postSignUp',
@@ -35,7 +31,8 @@ Route::post('/login', [
 
 Route::post('/createpost', [
 	'uses' => 'PostController@postCreatePost',
-	'as' => 'post.create'
+	'as' => 'post.create',
+	'middleware' => 'auth'
 ]);
 
 Route::get('logout', function()
@@ -44,9 +41,21 @@ Route::get('logout', function()
     return Redirect::to('/'); # add a log out message
 });
 
+Route::get('/delete-post/{post_id}', [
+	'uses' => 'PostController@deletePost',
+	'as' => 'post.delete',
+	'middleware' => 'auth'
+]);
+
+Route::get('/like/{post_id}/{friend_id}', [
+	'uses' => 'PostController@increaseLikes',
+	'as' => 'post.like',
+	'middleware' => 'auth'
+]);
+
 });
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
