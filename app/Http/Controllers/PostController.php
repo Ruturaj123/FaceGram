@@ -3,16 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use App\Comments;
+use View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 
 class PostController extends Controller{
-
-	// public function getHome(){
-	// 	$posts = Post::all();
-	// 	return view('home', $posts);
-	// }
 
 	public function postCreatePost(Request $request){
 		$this->validate($request, [
@@ -63,4 +60,47 @@ class PostController extends Controller{
 		}
 		return redirect()->route('home');
 	}
+
+	public function comment($post_id, $friend_id, Request $request)
+	{
+		$comment = new Comments();
+		if($request['comment']){
+			$comment->post_id = $post_id;
+			$comment->user_id = $friend_id;
+			$comment->body = $request['comment'];
+		}
+
+		if($request->user()->comments()->save($comment)){
+			$message = 'Post successfully created!';
+		}
+
+		return redirect()->route('home');
+	}
+
+	public function fetchComments($post_id)
+	{
+		$comments = Comments::where('post_id', $post_id)->orderBy('created_at', 'desc')->get();
+		info($comments);
+		return response()->json(['comments' => $comments, 'c_flag' => true]);
+        // return view('home', ['comments' => $comments, 'c_flag' => true])->renderSections()['cmts'];
+	}
+
+	public function message()
+    {
+
+        // $user = Auth::user();
+
+        // $user_list = $user->messagePeopleList();
+
+        // $show = false;
+        // if ($id != null){
+        //     $friend = User::find($id);
+        //     if ($friend){
+        //         $show = true;
+        //     }
+        // }
+
+        return View::make('msg');
+        // , compact('user', 'user_list', 'show', 'id')
+    }
 }
