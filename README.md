@@ -1,6 +1,5 @@
 # FaceGram - Social Networking Site
-
-### 5th Semester Web Development Mini Project
+#### This website is done taking into consideration Instagram and Facebook.
 
 **Login / Signup Page:**
 ![screenshot from 2018-10-21 20-02-21](https://user-images.githubusercontent.com/25198226/47268298-ce5a2a80-d56c-11e8-8025-6d22e60bed24.png)
