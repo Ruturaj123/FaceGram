@@ -16,10 +16,10 @@
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 	<!-- CSS Files -->
-	<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
-	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('css/mdb.min.css') }}" rel="stylesheet">
+	<link href="{{ secure_asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
+	<link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
 
 </head>
 
@@ -134,25 +134,25 @@
 	</div>
 </div>
 
-<script type="text/javascript" src="{{ asset('js/core/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/bootstrap-datetimepicker.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/nouislider.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/jquery.sharrre.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/core/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/core/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/core/bootstrap-material-design.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/bootstrap-datetimepicker.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/nouislider.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/jquery.sharrre.js') }}"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-<script type="text/javascript" src="{{ asset('js/material-kit.js?v=2.0.4') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/material-kit.js?v=2.0.4') }}"></script>
 
 <div class="container-fluid">
 	@yield('content')
 </div>
 <!--   Core JS Files   -->
-{{-- <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script> --}}
-{{-- <script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script> --}}
+{{-- <script type="text/javascript" src="{{ secure_asset('js/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/mdb.min.js') }}"></script> --}}
+{{-- <script type="text/javascript" src="{{ secure_asset('js/jquery-3.3.1.min.js') }}"></script> --}}
 
 
 <script type="text/javascript">

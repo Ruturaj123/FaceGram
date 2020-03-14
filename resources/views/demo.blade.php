@@ -12,8 +12,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
 
     <!-- Material Kit CSS -->
-    <link href="{{ asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
   </head>
   <body style="margin: 75px 50px 75px 50px;">
     <center>
@@ -92,7 +92,7 @@
  <div class="col-md-2">
         <div class="card">
           
-          <img class="card-header card-header-success ml-auto mr-auto" src="{{ asset('img/avatar_man.png') }}" style="border-radius: 50%;" width="100px" height="100px">
+          <img class="card-header card-header-success ml-auto mr-auto" src="{{ secure_asset('img/avatar_man.png') }}" style="border-radius: 50%;" width="100px" height="100px">
           <div class="card-body">
            <i class="material-icons">settings</i>Settings<br>
             <i class="material-icons">notifications</i>Notifications<br>
@@ -104,13 +104,13 @@
      
       </center>
 <!--   Core JS Files   -->
-<script type="text/javascript" src="{{ asset('js/core/jquery.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/moment.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/bootstrap-datetimepicker.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/nouislider.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/plugins/jquery.sharrre.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/core/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/core/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/core/bootstrap-material-design.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/moment.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/bootstrap-datetimepicker.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/nouislider.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/plugins/jquery.sharrre.js') }}"></script>
 <script async defer src="https://buttons.github.io/buttons.js"></script>
-<script type="text/javascript" src="{{ asset('js/material-kit.js?v=2.0.4') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/material-kit.js?v=2.0.4') }}"></script>
 </html>

@@ -43,7 +43,7 @@ Home
 	<div class="col-md-3">
 		<div class="card">
 
-			<img class="card-header card-header-success ml-auto mr-auto" src="{{ asset('img/avatar_man.png') }}" style="border-radius: 50%;" width="100px" height="100px">
+			<img class="card-header card-header-success ml-auto mr-auto" src="{{ secure_asset('img/avatar_man.png') }}" style="border-radius: 50%;" width="100px" height="100px">
 			<div class="card-body">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -88,7 +88,7 @@ Home
 					<p class="card-text">{{ $post->body }}</p>
 					@if($post->image_name != null)
 					<div class="card">
-						<img class="card-img-top" src="{{ asset('storage/upload/'.$post->image_name) }}" alt="Card image cap" height="500">
+						<img class="card-img-top" src="{{ secure_asset('storage/upload/'.$post->image_name) }}" alt="Card image cap" height="500">
 					</div>
 					@endif
 					<div class="upload-time">

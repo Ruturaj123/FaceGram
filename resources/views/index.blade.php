@@ -9,10 +9,10 @@
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/mdb.min.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -173,10 +173,10 @@
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-<script type="text/javascript" src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/popper.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('js/mdb.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ secure_asset('js/mdb.min.js') }}"></script>
 </body>
 
 </html>

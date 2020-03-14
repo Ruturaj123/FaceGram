@@ -15,10 +15,10 @@
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
-  <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/mdb.min.css') }}" rel="stylesheet">
-  <link href="{{ asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
-  <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/mdb.min.css') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/material-kit.css?v=2.0.4') }}" rel="stylesheet">
+  <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body class="profile-page sidebar-collapse">
@@ -135,7 +135,7 @@
 </div>
 
 
-<div class="page-header header-filter" data-parallax="true" style="background-image: url({{ URL::asset('img/city-profile.jpg') }});" id="CoverPhoto"></div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url({{ URL::secure_asset('img/city-profile.jpg') }});" id="CoverPhoto"></div>
 <div class="main main-raised">
   <div class="profile-content">
     <div class="container">
@@ -144,9 +144,9 @@
           <div class="profile">
             <div class="avatar">
               @if($user[0]->profile_pic != null)
-              <img class="ml-auto mr-auto" src="{{ asset('storage/upload/' + $user[0]->profile_pic) }}" style="border-radius: 50%;"height="150px">
+              <img class="ml-auto mr-auto" src="{{ secure_asset('storage/upload/' + $user[0]->profile_pic) }}" style="border-radius: 50%;"height="150px">
               @else
-              <img class="ml-auto mr-auto" src="{{ asset('img/avatar_man.png') }}" style="border-radius: 50%;"height="150px">
+              <img class="ml-auto mr-auto" src="{{ secure_asset('img/avatar_man.png') }}" style="border-radius: 50%;"height="150px">
               @endif
               @if($root)
               <div class="upload-btn-wrapper">
@@ -216,7 +216,7 @@
               <div class="tab-pane active text-center gallery" id="studio">
                 <div class="row">
               {{-- <div class="col-md-3 ml-auto">
-                <img src="{{ asset('img/examples/studio-1.jpg') }}" class="rounded" data-original-title="View" alt="Image" id="img1">
+                <img src="{{ secure_asset('img/examples/studio-1.jpg') }}" class="rounded" data-original-title="View" alt="Image" id="img1">
                 <!-- Modal-->
                 <div id="myModal" class="modal">
                   <span class="close">&times;</span>
@@ -224,12 +224,12 @@
                   <div id="caption"></div>
                 </div>
                 <!-- Modal Ends -->
-                <img src="{{ asset('img/examples/studio-2.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/studio-2.jpg') }}" class="rounded">
               </div> --}}
               @foreach($posts as $post)
               @if($post->image_name)
               <div class="col-md-3">
-                <img src="{{ asset('storage/upload/'.$post->image_name) }}" style="cursor: pointer;" class="rounded">
+                <img src="{{ secure_asset('storage/upload/'.$post->image_name) }}" style="cursor: pointer;" class="rounded">
               </div>
               @endif
               @endforeach
@@ -238,26 +238,26 @@
          {{--  <div class="tab-pane text-center gallery" id="works">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="{{ asset('img/examples/olu-eletu.jpg') }}" class="rounded">
-                <img src="{{ asset('img/examples/clem-onojeghuo.jpg') }}" class="rounded">
-                <img src="{{ asset('img/examples/cynthia-del-rio.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/olu-eletu.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/clem-onojeghuo.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/cynthia-del-rio.jpg') }}" class="rounded">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="{{ asset('img/examples/mariya-georgieva.jpg') }}" class="rounded">
-                <img src="{{ asset('img/examples/clem-onojegaw.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/mariya-georgieva.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/clem-onojegaw.jpg') }}" class="rounded">
               </div>
             </div>
           </div> --}}
           {{-- <div class="tab-pane text-center gallery" id="favorite">
             <div class="row">
               <div class="col-md-3 ml-auto">
-                <img src="{{ asset('img/examples/mariya-georgieva.jpg') }}" class="rounded">
-                <img src="{{ asset('img/examples/studio-3.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/mariya-georgieva.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/studio-3.jpg') }}" class="rounded">
               </div>
               <div class="col-md-3 mr-auto">
-                <img src="{{ asset('img/examples/clem-onojeghuo.jpg') }}" class="rounded">
-                <img src="{{ asset('img/examples/olu-eletu.jpg') }}" class="rounded">
-                <img src="{{ asset('img/examples/studio-1.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/clem-onojeghuo.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/olu-eletu.jpg') }}" class="rounded">
+                <img src="{{ secure_asset('img/examples/studio-1.jpg') }}" class="rounded">
               </div>
             </div>
           </div> --}}
@@ -346,15 +346,15 @@
     }
   </script> --}}
 
-  <script type="text/javascript" src="{{ asset('js/core/jquery.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/core/popper.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/core/bootstrap-material-design.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/plugins/moment.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/plugins/bootstrap-datetimepicker.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/plugins/nouislider.min.js') }}"></script>
-  <script type="text/javascript" src="{{ asset('js/plugins/jquery.sharrre.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/core/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/core/popper.min.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/core/bootstrap-material-design.min.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/plugins/moment.min.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/plugins/bootstrap-datetimepicker.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/plugins/nouislider.min.js') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/plugins/jquery.sharrre.js') }}"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script type="text/javascript" src="{{ asset('js/material-kit.js?v=2.0.4') }}"></script>
+  <script type="text/javascript" src="{{ secure_asset('js/material-kit.js?v=2.0.4') }}"></script>
   <script type="text/javascript">
 
     function updateProfile() {

@@ -135,7 +135,7 @@ Messages
       <div class="col-md-2">
         <div class="card">
 
-          <img class="card-header card-header-success ml-auto mr-auto" src="{{ asset('img/avatar_man.png') }}" style="border-radius: 50%;" width="100px" height="100px">
+          <img class="card-header card-header-success ml-auto mr-auto" src="{{ secure_asset('img/avatar_man.png') }}" style="border-radius: 50%;" width="100px" height="100px">
           <div class="card-body">
            <i class="material-icons">settings</i>Settings<br>
            <i class="material-icons">notifications</i>Notifications<br>
