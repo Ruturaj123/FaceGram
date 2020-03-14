@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\User;
+use App\Friend;
 use App\Models\UserDirectMessage;
 use DB;
 use Illuminate\Http\Request;
@@ -26,19 +27,22 @@ class MessageController extends Controller
     public function index()
     {
 
-        // $user = Auth::user();
+        $user = Auth::user();
+        $id = $user->id;
+        // $user_list = $user->friendList($id);
+        $friendsList = Friend::where(function($q) use ($id) {
+                 return $q->where(['user_id' => $id, 'confirm' => 1])->orWhere(['friend_id' => $id, 'confirm' => 1]);
+             })->get();
 
-        // $user_list = $user->messagePeopleList();
+        $show = false;
+        if ($id != null){
+            $friend = User::find($id);
+            if ($friend){
+                $show = true;
+            }
+        }
 
-        // $show = false;
-        // if ($id != null){
-        //     $friend = User::find($id);
-        //     if ($friend){
-        //         $show = true;
-        //     }
-        // }
-
-        return view('message', compact('user', 'user_list', 'show', 'id'));
+        return view('message', compact('user', 'friendsList', 'show', 'id'));
     }
 
 
